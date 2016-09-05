@@ -7,7 +7,7 @@
 Prepare a rails 4.2 application using Ruby 2.1 , which would have 2 isolated APIs, public and private.
 
 Private API responding to the following requests:
-  
+
 * 1 - GET  locations/:country_code
 * 2 - GET  target_groups/:country_code
 * 3 - POST evaluate_target
@@ -46,8 +46,8 @@ The application should have:
 - 3 Countries, each with different panel provider
 - 3 Panel Providers
 - 20 Locations of any type (city, region, state, etc.)
-- 4 Location Groups, 3 of them with different provider and 1 would belong to any of them  
-- 4 root Target Groups and each root should start a tree which is minimium 3 levels deep (3 of them with different provider and 1 would belong to any of them) 
+- 4 Location Groups, 3 of them with different provider and 1 would belong to any of them
+- 4 root Target Groups and each root should start a tree which is minimium 3 levels deep (3 of them with different provider and 1 would belong to any of them)
 
 ## request info
 
@@ -71,7 +71,7 @@ and return a price based on a logic specific to each panel provider used by a co
 
 #### Request #4
 
-Same as #1 but for public consumption 
+Same as #1 but for public consumption
 
 #### Request #5
 
@@ -80,17 +80,17 @@ Same as #2 but for public consumption
 ## panel providers pricing logic
 
 Each panel provider will have a different pricing logic
- 
+
 #### Panel 1
 
 The price should be based on how many letters "a" can you find on this site http://time.com divided by 100
-    
+
 #### Panel 2
 
-The price should be based on the number of "b" opening tags you can find in this feed https://ajax.googleapis.com/ajax/services/feed/find?v=1.0&q=news 
+The price should be based on the number of "b" opening tags you can find in this feed https://ajax.googleapis.com/ajax/services/feed/find?v=1.0&q=news
 
 The tags will be encoded like this \u003cb\u003e if you view it as a raw JSON.
- 
+
 #### Panel 3
 
 The price should be based on how many html nodes can you find on this site http://time.com divided by 100
