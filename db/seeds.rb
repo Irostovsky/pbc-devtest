@@ -6,6 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-ua = Country.create code: :ua
-us = Country.create code: :us
-uk = Country.create code: :uk
+joo = PanelProvider.create code: :joo
+john = PanelProvider.create code: :john
+max = PanelProvider.create code: :max
+ua = joo.create_country code: :ua
+usa = john.create_country code: :usa
+uk = max.create_country code: :uk
