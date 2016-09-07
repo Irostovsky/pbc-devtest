@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160907172735) do
+ActiveRecord::Schema.define(version: 20160907180120) do
 
   create_table "countries", force: :cascade do |t|
     t.string   "code",              limit: 255
@@ -52,6 +52,15 @@ ActiveRecord::Schema.define(version: 20160907172735) do
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
+
+  create_table "target_group_hierarchies", id: false, force: :cascade do |t|
+    t.integer "ancestor_id",   limit: 4, null: false
+    t.integer "descendant_id", limit: 4, null: false
+    t.integer "generations",   limit: 4, null: false
+  end
+
+  add_index "target_group_hierarchies", ["ancestor_id", "descendant_id", "generations"], name: "target_group_anc_desc_idx", unique: true, using: :btree
+  add_index "target_group_hierarchies", ["descendant_id"], name: "target_group_desc_idx", using: :btree
 
   create_table "target_groups", force: :cascade do |t|
     t.string   "name",              limit: 255

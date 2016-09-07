@@ -22,4 +22,6 @@ rand = Random.new
   end
 end
 
-
+tg1 = joo.target_groups.create name: 'tg1'
+tg1.children.create name: 'tg1.1'
+tg1.children.create name: 'tg1.2'
