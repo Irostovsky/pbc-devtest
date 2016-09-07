@@ -9,10 +9,10 @@ usa = john.create_country code: :usa
 uk = max.create_country code: :uk
 
 location_groups = []
-location_groups << joo.location_groups.create(name: :lg1, country: joo.country)
-location_groups << john.location_groups.create(name: :lg2, country: john.country)
-location_groups << max.location_groups.create(name: :lg3, country: max.country)
-location_groups << max.location_groups.create(name: :lg4, country: joo.country)
+location_groups << joo.location_groups.create(name: :lg1)
+location_groups << john.location_groups.create(name: :lg2)
+location_groups << max.location_groups.create(name: :lg3)
+location_groups << max.location_groups.create(name: :lg4)
 
 rand = Random.new
 20.times.each do |i|
