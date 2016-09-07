@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :target_group do
-    name "MyString"
-    parent_id ""
+    name "Target Group"
+    association :panel_provider
   end
 end
