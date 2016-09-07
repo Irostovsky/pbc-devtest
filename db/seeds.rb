@@ -23,5 +23,19 @@ rand = Random.new
 end
 
 tg1 = joo.target_groups.create name: 'tg1'
-tg1.children.create name: 'tg1.1'
+tg1.children.create(name: 'tg1.1').children.create(name: 'tg1.1.1').children.create(name: 'tg1.1.1.1')
 tg1.children.create name: 'tg1.2'
+
+tg2 = john.target_groups.create name: 'tg2'
+tg211 = tg2.children.create(name: 'tg2.1').children.create(name: 'tg2.1.1')
+tg211.children.create(name: 'tg2.1.1.1')
+tg211.children.create(name: 'tg2.1.1.2')
+
+tg3 = john.target_groups.create name: 'tg3'
+tg311 = tg3.children.create(name: 'tg3.1').children.create(name: 'tg3.1.1')
+tg311.children.create(name: 'tg3.1.1.1')
+tg311.children.create(name: 'tg3.1.1.2').children.create(name: 'tg3.1.1.2.1')
+
+max.target_groups.create(name: 'tg4').children.create(name: 'tg4.1').
+  children.create(name: 'tg4.1.1').children.create(name: 'tg4.1.1.1')
+
